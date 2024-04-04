@@ -1,0 +1,54 @@
+Chatbot Documentation:
+
+1. Overview:
+The financial chatbot is a tool designed to provide users with financial insights into three prominent companies: Microsoft, Tesla, and Apple. Leveraging Python and pandas for data manipulation and analysis, the chatbot allows users to interactively query financial information based on predefined formats. This documentation provides a comprehensive overview of how the chatbot operates, the types of queries it can respond to, details about the company's financial data, limitations, and potential future improvements.
+
+2. Data Setup:
+The chatbot utilizes pandas DataFrames to organize and store financial data for Microsoft, Tesla, and Apple. Each DataFrame contains key financial metrics such as total revenue, net income, total assets, total liabilities, and cash flow from operating activities for three consecutive years (2021, 2022, and 2023).
+
+3. Company Data:
+
+Microsoft:
+Microsoft's financial data showcases its revenue growth, profitability, and asset management over the specified three-year period.
+Total revenue increased from $168,088 in 2021 to $211,915 in 2023, reflecting the company's revenue growth trajectory.
+Net income also experienced an upward trend, indicating improved profitability over the years.
+Total assets saw significant growth, indicating Microsoft's expansion and investment strategies.
+Tesla:
+Tesla's financial data provides insights into the electric vehicle manufacturer's revenue, net income, and asset utilization.
+Total revenue surged from $53,823 in 2021 to $96,773 in 2023, reflecting Tesla's rapid revenue growth.
+Net income witnessed substantial growth, highlighting the company's improving profitability.
+Total assets expanded, indicating Tesla's investments in production capacity and infrastructure.
+Apple:
+Apple's financial data illustrates the tech giant's revenue, net income, and asset management strategies.
+Total revenue grew steadily from $60,523 in 2021 to $104,973 in 2023, driven by strong product sales and services revenue.
+Net income remained robust, reflecting Apple's consistent profitability.
+Total assets remained stable, indicating Apple's efficient asset management practices.
+4. Predefined Queries:
+The chatbot supports three predefined query formats:
+
+"What is the current total revenue for [Company]?"
+"How has [Company]'s net income changed over the past two years?"
+"What is the difference in total assets between [Company1] and [Company2] in [Year]?"
+5. Functions:
+The chatbot employs several functions to process user queries and generate responses:
+
+get_valid_user_query(): Prompts the user for a financial question and validates it against predefined query formats.
+get_total_revenue(company, year): Retrieves the total revenue for the specified company and year.
+get_net_income_change(company): Calculates the net income change over the past two years for the specified company.
+get_assets_difference(company1, company2, year): Calculates the difference in total assets between two companies for the specified year.
+handle_user_query(query): Extracts information from the user's query, matches it with predefined formats, and calls corresponding functions to generate responses.
+6. User Interaction:
+The main function, process_user_query(), facilitates user interaction by prompting for a financial question, processing the query, and printing the response. If the query does not match predefined formats, the user is prompted to use predefined query formats.
+
+7. Limitations:
+
+The chatbot is constrained by predefined query formats and may struggle with variations or ambiguous questions.
+It relies on static dataframes, limiting its ability to provide real-time or dynamic financial insights.
+The chatbot's natural language processing capabilities are limited, potentially hindering its understanding of complex queries.
+8. Future Improvements:
+
+Incorporating natural language processing algorithms to enhance the chatbot's ability to understand and respond to a wider range of user queries.
+Integrating with financial APIs to fetch real-time data, enabling more accurate and up-to-date responses.
+Expanding predefined query formats to cover a broader spectrum of financial questions and scenarios.
+9. Conclusion:
+In conclusion, the financial chatbot serves as a valuable tool for users seeking quick and accessible financial insights into Microsoft, Tesla, and Apple. While it has its limitations, the chatbot provides a user-friendly interface for accessing key financial metrics and trends, paving the way for potential enhancements and improvements in the future.
